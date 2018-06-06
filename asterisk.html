@@ -1,0 +1,41 @@
+<!--
+Josh Page
+9/17/17
+Unit 3 Asterik assignment 
+Nested for loops
+-->
+
+<html>
+<head>
+</head>
+<body>
+	<script>
+	// This function runs two for loops, both with a nested for loop within them, it is used to generate a design of *'s
+	// The function will be called when the button is pressed.
+		function func()
+		{
+			for(var row = 1; row <= 5; row++) // nested for loop to start the increase
+			{
+					for(var asterik = 0; asterik < row; asterik++) //loop for how many asteriks
+					{
+						document.write("*");
+					}
+					document.write("<br>"); // goes to the next row
+			}
+			
+			for (var row = 0; row <= 4; row++) // Nested for loop to start the descent
+			{
+					for(var asterik = 4; asterik > row; asterik--) // loop for how many asteriks
+					{
+						document.write("*");
+					}
+					document.write("<br>"); //goes to the next row
+			}
+		}
+	</script>
+	
+	<!-- a button is created and an onclick event is called when the button is clicked.
+	The function func() is called.  -->
+	<input type = "button" onclick = "func()" value = "Click here to view pattern"/>
+</body>
+</html>
